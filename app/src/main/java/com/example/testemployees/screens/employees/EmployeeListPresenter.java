@@ -1,11 +1,8 @@
 package com.example.testemployees.screens.employees;
 
-import android.widget.Toast;
-
 import com.example.testemployees.api.ApiFactory;
 import com.example.testemployees.api.ApiService;
 import com.example.testemployees.pojo.EmployeeResponse;
-import com.example.testemployees.screens.EmployeeListActivity;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -33,7 +30,7 @@ public class EmployeeListPresenter {
                 .subscribe(new Consumer<EmployeeResponse>() {
                     @Override
                     public void accept(EmployeeResponse employeeResponse) throws Exception {
-                        view.showData(employeeResponse.getResponse());
+                        view.showData(employeeResponse.getEmployees());
 
 
                     }
